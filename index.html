@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Virtual Pet Simulator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>🐾 Virtual Pet Simulator</h1>
+  <button onclick="toggleMusic()" id="music-btn">🔈 Play Music</button>
+  <div class="pet-container">
+    <img id="pet-image" src="https://i.imgur.com/NkqUfsT.png" alt="Virtual Pet" onclick="patPet()" onmousedown="startRub()" onmouseup="stopRub()" onmousemove="handleRub()" />
+    <button onclick="useToy()" class="fixed-toy-btn">🧸</button>
+    <button onclick="whistle()" class="whistle-icon">🎵</button>
+    <div class="stats">
+      <div>Hunger: <progress id="hunger-bar" value="50" max="100"></progress></div>
+      <div>Happiness: <progress id="happiness-bar" value="50" max="100"></progress></div>
+      <div>Energy: <progress id="energy-bar" value="50" max="100"></progress></div>
+    </div>
+    <div class="actions">
+      <button onclick="feedPet()">🍎 Feed</button>
+      <button onclick="playWithPet()">⚽ Play</button>
+      <button onclick="sleepPet()">💤 Sleep</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
