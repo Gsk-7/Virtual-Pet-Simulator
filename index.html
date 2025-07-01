@@ -1,30 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Virtual Pet Simulator</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pet Paws - Vanilla JS Version</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* A simple style to prevent layout shifts while the app loads */
+        body { font-family: 'Inter', sans-serif; background-color: #f3f4f6; }
+    </style>
 </head>
 <body>
-  <h1>🐾 Virtual Pet Simulator</h1>
-  <button onclick="toggleMusic()" id="music-btn">🔈 Play Music</button>
-  <div class="pet-container">
-    <img id="pet-image" src="https://i.imgur.com/NkqUfsT.png" alt="Virtual Pet" onclick="patPet()" onmousedown="startRub()" onmouseup="stopRub()" onmousemove="handleRub()" />
-    <button onclick="useToy()" class="fixed-toy-btn">🧸</button>
-    <button onclick="whistle()" class="whistle-icon">🎵</button>
-    <div class="stats">
-      <div>Hunger: <progress id="hunger-bar" value="50" max="100"></progress></div>
-      <div>Happiness: <progress id="happiness-bar" value="50" max="100"></progress></div>
-      <div>Energy: <progress id="energy-bar" value="50" max="100"></progress></div>
-    </div>
-    <div class="actions">
-      <button onclick="feedPet()">🍎 Feed</button>
-      <button onclick="playWithPet()">⚽ Play</button>
-      <button onclick="sleepPet()">💤 Sleep</button>
-    </div>
-  </div>
+    <!-- The entire application will be rendered inside this single div by JavaScript -->
+    <div id="app-container"></div>
 
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
